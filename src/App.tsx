@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
@@ -9,7 +9,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Inicio } from './pages/Inicio';
 import { Portafolio } from './pages/Portafolio';
 import { Curriculum } from './pages/Curriculum';
-import { SimpleBottomNavigation } from './pages/Inicio/components/SimpleBottomNavigation';
+import { SimpleBottomNavigation } from './components/SimpleBottomNavigation';
+import ButtonAppBar from './components/ButtonAppBar';
 
 const baseTheme = createTheme({
   palette: {
@@ -28,47 +29,47 @@ function App() {
 
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
-  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
 
-  if (matchesSM) {
-    return(
-      <>
-        <p>Small</p>
-      </>
-    )
-  } else if (matchesMD) {
-    return(
-      <>
-        <p>Medium</p>
-      </>
-    )
-  } else {
-    return(
-      <>
-        <p>Bigger than MD</p>
-      </>
-    )
-  }
+  useEffect(() => {
 
-  // return (
-  //   <>
-  //     <ThemeProvider theme={baseTheme}>
-  //       <CssBaseline/>
-  //       <HashRouter>
+    fetch("https://api.github.com/users/ChristopherPinedo/repos")
+      .then(response => response.json())
+      .then(result => {
+        console.log(result)
+        let obj = result.map((ele: any) => ({
+          url: ele.html_url,
+          created_at: ele.created_at,
+          language: ele.language,
+          name: ele.name,
+        }))
+        console.log(obj)
+        return result
+      })
+      .catch(error => console.log(error))
 
-  //         {/* Navigation bar */}
-  //         <SimpleBottomNavigation/>
+  }, [])
 
-  //         <Routes>
-  //             <Route path="/" element={<Inicio />} />
-  //             <Route path="/portafolio" element={<Portafolio />} />
-  //             <Route path="/curriculum" element={<Curriculum />} />
-  //         </Routes>
+  return (
+    <>
+      <ThemeProvider theme={baseTheme}>
+        <CssBaseline/>
+        <HashRouter>
 
-  //       </HashRouter>
-  //     </ThemeProvider>
-  //   </>
-  // );
+          {/* Navigation bar */}
+          {matchesSM
+            ? <SimpleBottomNavigation/>
+            : <ButtonAppBar/>}
+
+          <Routes>
+              <Route path="/" element={<Inicio />} />
+              <Route path="/portafolio" element={<Portafolio />} />
+              <Route path="/curriculum" element={<Curriculum />} />
+          </Routes>
+        </HashRouter>
+      </ThemeProvider>
+    </>
+  );
+
 }
 
 export default App;
