@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import { NavLink } from 'react-router-dom';
 
 
-export default function ButtonAppBar() {
+function MainAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -15,11 +15,13 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Button component={NavLink} to="/" color="inherit">Inicio</Button>
-          <Button component={NavLink} to="/curriculum" color="inherit">Curriculum</Button>
-          <Button component={NavLink} to="/portafolio" color="inherit">Portafolio</Button>
+          <Button component={NavLink} to="/" color="inherit">Home</Button>
+          <Button component={NavLink} to="/cv" color="inherit">CV</Button>
+          <Button component={NavLink} to="/portfolio" color="inherit">Portfolio</Button>
         </Toolbar>
       </AppBar>
     </Box>
   );
 }
+
+export { MainAppBar }

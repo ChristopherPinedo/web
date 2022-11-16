@@ -6,11 +6,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { Inicio } from './pages/Inicio';
-import { Portafolio } from './pages/Portafolio';
-import { Curriculum } from './pages/Curriculum';
-import { SimpleBottomNavigation } from './components/SimpleBottomNavigation';
-import ButtonAppBar from './components/ButtonAppBar';
+import { Home } from './pages/Home';
+import { Portfolio } from './pages/Portfolio';
+import { CV } from './pages/CV';
+import { MainBottomNavigation } from './components/MainBottomNavigation';
+import { MainAppBar } from './components/MainAppBar';
 
 const baseTheme = createTheme({
   palette: {
@@ -30,6 +30,8 @@ function App() {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
+  const [data, setData] = useState([])
+
   useEffect(() => {
 
     fetch("https://api.github.com/users/ChristopherPinedo/repos")
@@ -38,16 +40,20 @@ function App() {
         console.log(result)
         let obj = result.map((ele: any) => ({
           url: ele.html_url,
+          ghpages_url: `https://${ele.owner}.github.io/${ele.name}`,
           created_at: ele.created_at,
-          language: ele.language,
+          main_language: ele.language,
+          languages: ele.languages_url,
           name: ele.name,
+          owner: ele.owner.login,
         }))
-        console.log(obj)
+        setData(obj)
         return result
       })
       .catch(error => console.log(error))
-
   }, [])
+
+  console.log(data)
 
   return (
     <>
@@ -57,13 +63,13 @@ function App() {
 
           {/* Navigation bar */}
           {matchesSM
-            ? <SimpleBottomNavigation/>
-            : <ButtonAppBar/>}
+            ? <MainBottomNavigation/>
+            : <MainAppBar/>}
 
           <Routes>
-              <Route path="/" element={<Inicio />} />
-              <Route path="/portafolio" element={<Portafolio />} />
-              <Route path="/curriculum" element={<Curriculum />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio data={data} />} />
+              <Route path="/cv" element={<CV />} />
           </Routes>
         </HashRouter>
       </ThemeProvider>

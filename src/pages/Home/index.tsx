@@ -5,7 +5,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-const Inicio = () => {
+const Home = () => {
   return (
     <Container >
       <Typography variant="h4" component="h1">Christopher Pinedo</Typography>
@@ -40,4 +40,4 @@ const Inicio = () => {
   )
 }
 
-export {Inicio}
+export {Home}

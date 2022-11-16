@@ -18,5 +18,9 @@
     "titleBar.inactiveBackground": "#f9e64f99",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#f9e64f"
+  "peacock.color": "#f9e64f",
+  "markdown-pdf.displayHeaderFooter": true,
+  "markdown-pdf.margin.bottom": "1.5cm",
+  "markdown-pdf.breaks": false,
+  "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span class='title'></span></div>"
 }

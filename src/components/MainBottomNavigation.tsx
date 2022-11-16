@@ -2,19 +2,20 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+
+import HomeIcon from '@mui/icons-material/Home';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import WorkIcon from '@mui/icons-material/Work';
+
 import { NavLink } from 'react-router-dom';
 
-function SimpleBottomNavigation() {
+function MainBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
   return (
     <Box>
       <BottomNavigation
         sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
-        showLabels
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
@@ -23,24 +24,24 @@ function SimpleBottomNavigation() {
         <BottomNavigationAction
           component={NavLink}
           to="/"
-          label="Inicio"
-          icon={<RestoreIcon />}
+          label="Home"
+          icon={<HomeIcon fontSize="large"/>}
         />
         <BottomNavigationAction
           component={NavLink}
-          to="curriculum"
-          label="Curriculum"
-          icon={<FavoriteIcon />}
+          to="/cv"
+          label="CV"
+          icon={<AssignmentIndIcon fontSize="large"/>}
         />
         <BottomNavigationAction
           component={NavLink}
-          to="portafolio"
-          label="Portafolio"
-          icon={<LocationOnIcon />}
+          to="/portfolio"
+          label="Portfolio"
+          icon={<WorkIcon fontSize="large"/>}
         />
       </BottomNavigation>
     </Box>
   );
 }
 
-export {SimpleBottomNavigation}
+export { MainBottomNavigation }
