@@ -6,25 +6,20 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 // import { UserProps } from 'myTypes';
 
-interface projectProps {
-  data: object
-}
-
-function ProjectCard() {
+function ProjectCard({element}) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {element.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {element.description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="large">View Code</Button>
-        <Button size="large">Visit Site</Button>
+        <Button size="large" href={element.gh_url}>View Code</Button>
+        <Button size="large" href={element.ghpages_url}>Visit Site</Button>
       </CardActions>
     </Card>
   );

@@ -30,30 +30,35 @@ function App() {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const [data, setData] = useState([])
+  const [fetchData, setFetchData] = useState([])
 
   useEffect(() => {
 
     fetch("https://api.github.com/users/ChristopherPinedo/repos")
-      .then(response => response.json())
+      .then(response => {
+        console.log(response)
+        return response.json()
+      })
       .then(result => {
         console.log(result)
         let obj = result.map((ele: any) => ({
-          url: ele.html_url,
-          ghpages_url: `https://${ele.owner}.github.io/${ele.name}`,
+          id: ele.id,
+          gh_url: ele.html_url,
+          ghpages_url: `https://${ele.owner.login}.github.io/${ele.name}`,
           created_at: ele.created_at,
           main_language: ele.language,
           languages: ele.languages_url,
           name: ele.name,
           owner: ele.owner.login,
+          description: ele.description,
         }))
-        setData(obj)
+        setFetchData(obj)
         return result
       })
       .catch(error => console.log(error))
   }, [])
 
-  console.log(data)
+  console.log(fetchData)
 
   return (
     <>
@@ -68,7 +73,7 @@ function App() {
 
           <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/portfolio" element={<Portfolio data={data} />} />
+              <Route path="/portfolio" element={<Portfolio data={fetchData} />} />
               <Route path="/cv" element={<CV />} />
           </Routes>
         </HashRouter>
