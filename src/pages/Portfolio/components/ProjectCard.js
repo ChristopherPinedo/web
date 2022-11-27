@@ -8,18 +8,23 @@ import Typography from '@mui/material/Typography';
 
 function ProjectCard({element}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {element.name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {element.description}
-        </Typography>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          children={element.name}
+        />
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          children={element.description}
+        />
       </CardContent>
       <CardActions>
-        <Button size="large" href={element.gh_url}>View Code</Button>
-        <Button size="large" href={element.ghpages_url}>Visit Site</Button>
+        <Button size="large" target="_blank" href={element.gh_url}>View Code</Button>
+        <Button size="large" target="_blank" href={element.ghpages_url}>Visit Site</Button>
       </CardActions>
     </Card>
   );

@@ -15,7 +15,13 @@ function MainBottomNavigation() {
   return (
     <Box>
       <BottomNavigation
-        sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
+        sx={{
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          right: 0,
+        }}
+        showLabels
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
@@ -24,20 +30,20 @@ function MainBottomNavigation() {
         <BottomNavigationAction
           component={NavLink}
           to="/"
-          label="Home"
+          label="Inicio"
           icon={<HomeIcon fontSize="large"/>}
         />
         <BottomNavigationAction
           component={NavLink}
-          to="/cv"
-          label="CV"
-          icon={<AssignmentIndIcon fontSize="large"/>}
+          to="/portfolio"
+          label="Portafolio"
+          icon={<WorkIcon fontSize="large"/>}
         />
         <BottomNavigationAction
           component={NavLink}
-          to="/portfolio"
-          label="Portfolio"
-          icon={<WorkIcon fontSize="large"/>}
+          to="/cv"
+          label="Curriculum"
+          icon={<AssignmentIndIcon fontSize="large"/>}
         />
       </BottomNavigation>
     </Box>
