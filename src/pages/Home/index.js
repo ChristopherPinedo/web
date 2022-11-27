@@ -1,10 +1,11 @@
 import React from 'react';
-import { Card, CardActions, CardContent, CardMedia, Container, Divider, Grid, IconButton, Stack, Typography } from '@mui/material';
+import { Card, CardActions, CardContent, Container, Divider, Grid, IconButton, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Image from 'mui-image'
+import ReactWhatsapp from 'react-whatsapp';
 
 const Home = () => {
   return (
@@ -17,9 +18,9 @@ const Home = () => {
         <Box >
           <Typography variant="h4" component="h2" mb={2} color="primary.main" >Bienvenido</Typography>
           <Typography variant="subtitle1">
-            Este sitio cumple la función de Curriculum y Portafolio,
-            aqui encontraras mi información de contacto y la recopilación
-            de mis proyectos públicos.
+            Este sitio cumple la función de Portafolio y Curriculum,
+            aquí encontraras la recopilación de mis proyectos públicos
+            además de información de contacto.
           </Typography>
         </Box>
         <Box>
@@ -42,45 +43,26 @@ const Home = () => {
               </Grid>
             </CardContent>
             <CardActions sx={{justifyContent:"space-evenly"}} >
-                <IconButton target="_blank" children={<WhatsAppIcon/>}/>
-                <IconButton target="_blank" children={<LinkedInIcon/>}/>
-                <IconButton target="_blank" children={<GitHubIcon/>}/>
+                <IconButton
+                  target="_blank"
+                  children={<WhatsAppIcon/>}
+                  component={ReactWhatsapp}
+                  number='978544045'
+                />
+                <IconButton
+                  target="_blank"
+                  children={<LinkedInIcon/>}
+                  href="https://www.linkedin.com/in/christopherpinedo/"
+                />
+                <IconButton
+                  target="_blank"
+                  children={<GitHubIcon/>}
+                  href="https://github.com/ChristopherPinedo"
+                />
             </CardActions>
           </Card>
         </Box>
       </Stack>
-      {/* <Card sx={{ display: 'flex' }}>
-        <Box
-          sx={{ display: 'flex', flexDirection: 'column' }}
-        >
-          <CardContent
-            sx={{ flex: '1 0 auto' }}
-            >
-            <Typography component="div" variant="body1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-            </Typography>
-          </CardContent>
-          <Box
-            sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}
-          >
-            <IconButton>
-              <WhatsAppIcon/>
-            </IconButton>
-            <IconButton>
-              <LinkedInIcon/>
-            </IconButton>
-            <IconButton>
-              <GitHubIcon/>
-            </IconButton>
-          </Box>
-        </Box>
-        <CardMedia
-          component="img"
-          sx={{ width: 151 }}
-          image="https://avatars.githubusercontent.com/u/69333394?v=4"
-          alt="Github profile image"
-        />
-      </Card> */}
     </Container>
   )
 }

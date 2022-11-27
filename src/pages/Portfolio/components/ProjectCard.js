@@ -5,13 +5,14 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 // import { UserProps } from 'myTypes';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 
 function ProjectCard({element}) {
   return (
     <Card>
       <CardContent>
         <Typography
-          gutterBottom
           variant="h5"
           component="div"
           children={element.name}
@@ -23,8 +24,22 @@ function ProjectCard({element}) {
         />
       </CardContent>
       <CardActions>
-        <Button size="large" target="_blank" href={element.gh_url}>View Code</Button>
-        <Button size="large" target="_blank" href={element.ghpages_url}>Visit Site</Button>
+        <Button
+          variant="outlined"
+          size="large"
+          target="_blank"
+          href={element.gh_url}
+          children="Codigo"
+          startIcon={<GitHubIcon/>}
+        />
+        <Button
+        variant="outlined"
+          size="large"
+          target="_blank"
+          href={element.ghpages_url}
+          children="Sitio"
+          startIcon={<GitHubIcon/>}
+        />
       </CardActions>
     </Card>
   );
