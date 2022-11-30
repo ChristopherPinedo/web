@@ -1,6 +1,6 @@
+import React from 'react'
 import { Container, Divider, Typography } from '@mui/material'
 import { Stack } from '@mui/system'
-import React from 'react'
 import { ProjectCard } from './components/ProjectCard'
 
 

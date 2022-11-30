@@ -20,6 +20,7 @@ function MainBottomNavigation() {
           bottom: 0,
           left: 0,
           right: 0,
+          zIndex: "appBar"
         }}
         showLabels
         value={value}

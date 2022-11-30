@@ -14,6 +14,7 @@ const Home = () => {
         marginTop={4}
         divider={<Divider orientation="horizontal" flexItem />}
         gap={4}
+        minHeight={"100vh"}
       >
         <Box >
           <Typography variant="h4" component="h2" mb={2} color="primary.main" >Bienvenido</Typography>
@@ -37,7 +38,7 @@ const Home = () => {
                 </Grid>
                 <Grid item xs={8}>
                   <Typography component="div" variant="body1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    Desarrollador de Software especializado en Frontend orientado a web usando React.<br/>Me considero una persona proactiva, resiliente y entusiasta por la tecnología que busca aprender constantemente.
                   </Typography>
                 </Grid>
               </Grid>
@@ -47,7 +48,7 @@ const Home = () => {
                   target="_blank"
                   children={<WhatsAppIcon/>}
                   component={ReactWhatsapp}
-                  number='978544045'
+                  number='+51978544045'
                 />
                 <IconButton
                   target="_blank"
