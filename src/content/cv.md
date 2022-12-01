@@ -1,25 +1,17 @@
+
 ## Christopher Pinedo
-#### Frontend Developer
 
-Bold **bold text**
-Italic _italicized text_
-Blockquote > blockquote
-Ordered List
-
-1. First item
-1. Second item
-1. Third item
-
-Unordered List
-
-- First item
-- Second item
-- Third item
-
-Code `code`
-
-A note[^1]
+**Frontend Developer**
 
 ---
 
-Link [link](https://www.example.com)
+> Desarrollador de Software especializado en Frontend orientado a web usando React.
+
+### Informacion de contacto
+
+- Email:
+- Telefono:
+- LinkedIn: `linkedin.com/in/christopherpinedo/`
+- Github:
+- Platzi:
+- Web:

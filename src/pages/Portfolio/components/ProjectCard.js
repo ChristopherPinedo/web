@@ -7,7 +7,8 @@ import Typography from '@mui/material/Typography';
 // import { UserProps } from 'myTypes';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInBrowserIcon from '@mui/icons-material/OpenInBrowser';
-import { Divider } from '@mui/material';
+import { Chip, Divider } from '@mui/material';
+import { Box } from '@mui/system';
 
 function ProjectCard({element}) {
 
@@ -41,11 +42,28 @@ function ProjectCard({element}) {
           color="text.secondary"
           children={element.description}
         />
-        {console.log(Object.entries(Langs))}
+        <Box
+        sx = {{
+          marginTop: 1,
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between"
+        }}>
+          {Object.entries(Langs).map( ele => <Chip label={ele[0]} />)}
+        </Box>
       </CardContent>
-      <CardActions>
+      <CardActions
+        sx = {{
+          padding: 2,
+          paddingTop: 0,
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between"
+        }}
+      >
         <Button
           variant="outlined"
+          fullWidth
           size="large"
           target="_blank"
           href={element.gh_url}
@@ -53,7 +71,8 @@ function ProjectCard({element}) {
           startIcon={<GitHubIcon/>}
         />
         <Button
-        variant="outlined"
+          variant="outlined"
+          fullWidth
           size="large"
           target="_blank"
           href={element.ghpages_url}

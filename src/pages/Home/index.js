@@ -28,20 +28,25 @@ const Home = () => {
           <Typography variant="h4" component="h2" mb={2} color="primary.main" >Sobre mi</Typography>
           <Card>
             <CardContent>
-              <Typography variant="h5" component="h5">Christopher Pinedo</Typography>
-              <Typography variant="subtitle1" mb={2} >Frontend Developer</Typography>
-              <Grid container spacing={2}>
-                <Grid item xs={4}>
-                  <Image
-                    src="https://avatars.githubusercontent.com/u/69333394?v=4"
-                  />
+              <Stack
+              divider={<Divider orientation="horizontal" flexItem/>}
+              spacing={2}
+              >
+                <Grid container spacing={2} alignItems="center">
+                  <Grid item xs={3} >
+                    <Image
+                      src="https://avatars.githubusercontent.com/u/69333394?v=4"
+                    />
+                  </Grid>
+                  <Grid item xs={9} >
+                    <Typography variant="h5" component="h5">Christopher Pinedo</Typography>
+                    <Typography variant="subtitle1" >Frontend Developer</Typography>
+                  </Grid>
                 </Grid>
-                <Grid item xs={8}>
-                  <Typography component="div" variant="body1">
-                    Desarrollador de Software especializado en Frontend orientado a web usando React.<br/>Me considero una persona proactiva, resiliente y entusiasta por la tecnología que busca aprender constantemente.
-                  </Typography>
-                </Grid>
-              </Grid>
+                <Typography component="div" variant="body1">
+                  Desarrollador de Software especializado en Frontend orientado a web usando React.<br/>Me considero una persona proactiva, resiliente y entusiasta por la tecnología que busca aprender constantemente.
+                </Typography>
+              </Stack>
             </CardContent>
             <CardActions sx={{justifyContent:"space-evenly"}} >
                 <IconButton
