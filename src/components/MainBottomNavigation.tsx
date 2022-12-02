@@ -41,7 +41,6 @@ function MainBottomNavigation() {
           icon={<WorkIcon fontSize="large"/>}
         />
         <BottomNavigationAction
-          disabled
           component={NavLink}
           to="/cv"
           label="Curriculum"

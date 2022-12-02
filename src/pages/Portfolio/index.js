@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Divider, Typography } from '@mui/material'
+import { Box, Container, Divider, Grid, Typography } from '@mui/material'
 import { Stack } from '@mui/system'
 import { ProjectCard } from './components/ProjectCard'
 
@@ -10,18 +10,29 @@ const Portfolio = ({data}) => {
       <Container>
         <Stack
           mt={4}
-          gap={4}
+          spacing={4}
           divider={<Divider orientation="horizontal" flexItem /> }
         >
           <Box>
             <Typography variant="h4" component="h2" color="primary.main" >Proyectos</Typography>
             <Typography variant="subtitle1" component="p" color="primary.main" >Fuente: Github</Typography>
           </Box>
-          <Stack>
+          <Grid container>
             {data && data.map(ele => (
-              <ProjectCard key={ele.id} element={ele} />
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+              >
+                <ProjectCard
+                  key={ele.id}
+                  element={ele}
+                  />
+              </Grid>
             ))}
-          </Stack>
+          </Grid>
         </Stack>
       </Container>
     </>

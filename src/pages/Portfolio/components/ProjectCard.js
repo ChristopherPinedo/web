@@ -44,10 +44,11 @@ function ProjectCard({element}) {
         />
         <Box
         sx = {{
-          marginTop: 1,
+          marginTop: 2,
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-between"
+          flexWrap: "wrap",
+          gap: 2,
         }}>
           {Object.entries(Langs).map( ele => <Chip label={ele[0]} />)}
         </Box>
@@ -58,7 +59,8 @@ function ProjectCard({element}) {
           paddingTop: 0,
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
+          gap: 1,
         }}
       >
         <Button
