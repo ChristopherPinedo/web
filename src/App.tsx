@@ -14,7 +14,7 @@ import { MainAppBar } from './components/MainAppBar';
 
 const baseTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
   },
   components: {
     MuiUseMediaQuery: {
