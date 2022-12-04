@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import cv from '../../content/cv.md'
 import Container from '@mui/material/Container';
 import { CvAppBar } from './components/CvAppBar'
+import { Box } from '@mui/material';
 
 const CV = () => {
 
@@ -19,7 +20,9 @@ const CV = () => {
     <>
       <CvAppBar/>
       <Container >
-        <ReactMarkdown remarkPlugins={[remarkGfm]} children={content} />
+        <Box mb={7}>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} children={content} />
+        </Box>
       </Container>
     </>
   )

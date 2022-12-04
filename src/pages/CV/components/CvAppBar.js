@@ -10,12 +10,12 @@ import cvpdf from '../../../content/cv.pdf'
 function CvAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" color="transparent">
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            CV
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            Curriculum
           </Typography>
-          <Button endIcon={<DownloadIcon/> } download href={cvpdf} >Descargar</Button>
+          <Button variant='contained' endIcon={<DownloadIcon/> } download href={cvpdf} > Descargar </Button>
         </Toolbar>
       </AppBar>
     </Box>

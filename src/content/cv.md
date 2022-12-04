@@ -11,19 +11,36 @@
 
 # 📒 Información de contacto
 
-- Email: christopher.pinedo@hotmail.com
-- Phone: +51 978 544 045
-- LinkedIn: https://www.linkedin.com/in/christopherpinedo
-- GitHub: https://github.com/ChristopherPinedo
-- Platzi: https://platzi.com/p/christopher.pinedo
-- Web: https://christopherpinedo.github.io/web
+- 📧 Email:
+
+    christopher.pinedo@hotmail.com
+
+- 📱 Phone:
+
+    +51 978 544 045
+
+- ⤴️ LinkedIn:
+
+    [linkedin.com/in/christopherpinedo](https://www.linkedin.com/in/christopherpinedo)
+
+- ⤴️ Github:
+
+    [github.com/ChristopherPinedo](https://github.com/ChristopherPinedo)
+
+- ⤴️ Platzi:
+
+    [platzi.com/p/christopher.pinedo](https://platzi.com/p/christopher.pinedo)
+
+- ⤴️ Web:
+
+    [christopherpinedo.github.io/web](https://christopherpinedo.github.io/web)
 
 ---
 
 ---
 
 
-# 👨‍💻 Habilidades
+# 💻 Habilidades
 
 ### Lo que puedo hacer:
 
@@ -31,49 +48,55 @@
 - Implementación de servicios web ( API REST ).
 - Desarrollo de sitios y aplicaciones web ( MPA, SPA).
 
-### Tecnologías que domino
+### Tecnologías con las que he trabajado:
 
-| HTML 5  |
-| --- |
-| CSS 3 |
-| •  Bootstrap 4+ |
-| •  SASS |
-| •  MUI |
-| Javascript ES5+ |
-| •  React.js v16+ |
-| GIT |
-| •  Github |
+**Development**
 
-| Project Management |
-| --- |
-| •  Notion |
-| •  JIRA |
-| Metodologías |
-| •  POO |
-| •  Agile |
-| Design |
-| •  FIGMA |
-| •  BEM |
+HTML 5
 
-### Estoy aprendiendo
+- Semantic
+- SEO
 
-| •  BIT ( Documentation ) |
-| --- |
-| •  JEST ( Testing ) |
-| •  Typescript ( Language extension ) |
+CSS 3
 
-### Quiero aprender
+- Bootstrap 4+
+- SASS
+- MUI
+- Emotion
 
-| •  GraphQL |
-| --- |
-| •  NEXT.js |
-| •  Oauth & OpenID |
+Javascript
+
+- React.js
+- Typescript
+
+Methodologies
+
+- Object Oriented
+- Functional Programing
+
+Version control system
+
+- Github
+
+**Project Management**
+
+- AGILE
+    - Scrum
+    - Kanban
+- JIRA
+- NOTION
+
+**Design**
+
+- Figma
+- BEM
+- Illustrator
 
 ---
 
 ---
 
-# 👨‍💼 Experiencia laboral
+#  💼 Experiencia laboral
 
 ## Supervisor Administrativo
 
@@ -85,10 +108,12 @@ Gestionar la información de horarios, planillas y tramites administrativos para
 **Herramientas:**
 
 - Manejo de información
-    - Excel, Google sheets ( Avanzado )
-    - Control de versiones ( GIT )
+
+    - Hojas de calculo ( Excel, Google Sheets )
+    - Control de versiones ( Github )
 
 - Gestión de proyectos
+
     - Notion ( kanban )
 
 ---
@@ -103,13 +128,13 @@ Lengua nativa
 
 ### Ingles
 
-B2 - Platzi Certified
+B2 - Platzi verified
 
 ---
 
 ---
 
-# 👨‍🎓 Educación
+# 🎓 Educación
 
 ## Ingeniería en Sistemas de Información
 
